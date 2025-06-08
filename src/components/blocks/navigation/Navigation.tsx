@@ -11,7 +11,7 @@ export const Navigation = () => {
           <a href="#work" className="navigation__list__item__link">Work</a>
         </div>
         <div className="navigation__list__item">
-          <a href="#About" className="navigation__list__item__link">About</a>
+          <a href="#about" className="navigation__list__item__link">About</a>
         </div>
         <div className="navigation__list__item">
           <a href="#contact" className="navigation__list__item__link">Contact</a>

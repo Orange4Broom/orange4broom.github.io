@@ -7,8 +7,15 @@ import gitIcon from '../images/icons/Git.png';
 import supabaseIcon from '../images/icons/Supabase.png';
 import firebaseIcon from '../images/icons/Firebase.png';
 
+export interface Technology {
+  name: string;
+  description: string;
+  icon: string;
+  backgroundColor: string;
+}
+
 export const useGetTechnologies = () => {
-  const technologies = [
+  const technologies: Technology[] = [
     {
       name: "Figma",
       description: "Design Tool",
@@ -59,5 +66,5 @@ export const useGetTechnologies = () => {
     }
   ];
 
-  return technologies;
+  return { technologies };
 };

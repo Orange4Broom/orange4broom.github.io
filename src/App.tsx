@@ -1,15 +1,18 @@
 import { Navigation } from "./components/blocks/navigation/Navigation";
 import { Icon } from "./components/elements/icon/Icon";
 import { useDownloadCV } from "./hooks/useDownloadCV";
-import { useGetTechnologies } from "./hooks/useGetTechnologies";
+import { Project, useGetProjects } from "./hooks/useGetProjects";
+import { Technology, useGetTechnologies } from "./hooks/useGetTechnologies";
 import './sections/aboutSection/aboutSection.scss';
 import './sections/contactSection/contactSection.scss';
 import './sections/homeSection/homeSection.scss';
+import './sections/workSection/workSection.scss';
 
 
 export const App = () => {
   const { handleDownloadCV } = useDownloadCV();
-  const technologies = useGetTechnologies();
+  const { technologies } = useGetTechnologies();
+  const { projects } = useGetProjects();
 
   return (
     <>
@@ -24,10 +27,10 @@ export const App = () => {
             Hi, I'm Jakub, I create intuitive, visually stunning, and highly functional web applications.
           </p>
           <div className="home-section__content__buttons">
-            <button type="button" className="home-section__content__buttons__button--work">
+            <a href="#work" className="home-section__content__buttons__button--work">
               See my work
               <Icon name="angle-right" type="fas" />
-            </button>
+            </a>
             <button type="button" onClick={handleDownloadCV} className="home-section__content__buttons__button--cv">
               <Icon name="file-arrow-down" type="fas" color="#4EB458" />
               Download CV
@@ -41,7 +44,7 @@ export const App = () => {
           <p className="about-section__content__description">I'm proficient in a range of modern technologies that empower me to build highly functional solutions.<br />These are some of my main technologies.</p>
         </div>
         <div className="about-section__content__technologies">
-          {technologies.map((technology) => (
+          {technologies.map((technology: Technology) => (
             <div className="about-section__content__technologies__technology" key={technology.name}>
               <div className="about-section__content__technologies__technology__icon" style={{ backgroundColor: technology.backgroundColor }}>
                 <img src={technology.icon} alt={technology.name} />
@@ -52,6 +55,35 @@ export const App = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="work-section" id="work">
+        <div className="work-section__header">
+          <h2 className="work-section__header__title">My Portfolio</h2>
+          <button type="button" className="work-section__header__button">
+            All projects
+            <Icon name="angle-right" type="fas" />
+          </button>
+        </div>
+        <div className="work-section__content">
+          <div className="work-section__content__project">
+            {projects.map((project: Project) => (
+              <div className="work-section__content__project__item" key={project.name}>
+                <img className="work-section__content__project__item__image" src={project.image} alt={project.name} />
+                <h3 className="work-section__content__project__item__title">{project.name}</h3>
+                <div className="work-section__content__project__item__info">
+                  <div className="work-section__content__project__item__tags">
+                    {project.tags.map((tag: string) => (
+                      <span className="work-section__content__project__item__tags__tag" key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <button type="button" onClick={() => window.open(project.link, '_blank')} className="work-section__content__project__item__button">
+                    <Icon name="arrow-right" type="fas" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section className="contact-section" id="contact">
