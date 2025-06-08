@@ -1,4 +1,3 @@
-import { Icon } from "@/components/elements/icon/Icon";
 import { Project, useGetProjects } from "@/hooks/useGetProjects";
 
 export const WorkSection = () => {

@@ -1,9 +1,6 @@
 import './contactSection.scss';
-import { useGetProjects } from '@/hooks/useGetProjects';
 
 export const ContactSection = () => {
-  const { projects } = useGetProjects();
-
   return (
     <section className="contact-section" id="contact">
       <div className="contact-section__top-content">

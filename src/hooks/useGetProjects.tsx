@@ -1,4 +1,3 @@
-import projectImage from "../images/projects/project.jpg";
 import beachkemp from "../images/projects/beachkemp.png";
 import bezpecnaplzen from "../images/projects/bezpecnaplzen.png";
 import obfinder from "../images/projects/finder.png";
