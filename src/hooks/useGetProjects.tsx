@@ -1,6 +1,11 @@
 import projectImage from "../images/projects/project.jpg";
+import beachkemp from "../images/projects/beachkemp.png";
+import bezpecnaplzen from "../images/projects/bezpecnaplzen.png";
+import obfinder from "../images/projects/finder.png";
+import firestorehelper from "../images/projects/firestorehelper.png";
 
 export interface Project {
+  id: string;
   name: string;
   image: string;
   tags: string[];
@@ -10,28 +15,32 @@ export interface Project {
 export const useGetProjects = () => {
   const projects: Project[] = [
     {
-      name: "Project 1",
-      image: projectImage,
-      tags: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js", "Express"],
-      link: "https://www.google.com",
+      id: 'beachkemp',
+      name: "Beach Kemp",
+      image: beachkemp,
+      tags: ["Typescript", "React", "Firebase", "Vercel"],
+      link: "https://beachkemp.com",
     },
     {
-      name: "Project 2",
-      image: projectImage,
-      tags: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js", "Express"],
-      link: "https://www.google.com",
+      id: 'bezpecnaplzen',
+      name: "Bezpečná plzeň",
+      image: bezpecnaplzen,
+      tags: ["Typescript", "React", "Firebase", "Vercel"],
+      link: "/project-2",
     },
     {
-      name: "Project 3",
-      image: projectImage,
-      tags: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js", "Express"],
-      link: "https://www.google.com",
+      id: 'obfinder',
+      name: "OB-Finder",
+      image: obfinder,
+      tags: ["Typescript", "React", "electron", "npm"],
+      link: "/project-3",
     },
     {
-      name: "Project 4",
-      image: projectImage,
-      tags: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js", "Express"],
-      link: "https://www.google.com",
+      id: 'firestorehelper',
+      name: "Firestore Helper TS",
+      image: firestorehelper,
+      tags: ["Typescript", "React", "Firebase"],
+      link: "/project-4",
     },
   ];
 

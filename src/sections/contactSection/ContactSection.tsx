@@ -1,9 +1,14 @@
+import './contactSection.scss';
+import { useGetProjects } from '@/hooks/useGetProjects';
+
 export const ContactSection = () => {
+  const { projects } = useGetProjects();
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-section__top-content">
-        <h2 className="contact-section__top-content__title">Like what you see? Reach out <a href="mailto:jakubtrncak@gmail.com" className="contact-section__top-content__title__link">via email</a> to collaborate!</h2>
-        <button type="button" className="contact-section__top-content__button">Contact me</button>
+        <h2 className="contact-section__top-content__title">Like what you see? Reach out <a href="mailto:orang4broom@gmail.com" className="contact-section__top-content__title__link">via email</a> to collaborate!</h2>
+        <button type="button" onClick={() => window.open('mailto:orang4broom@gmail.com', '_blank')} className="contact-section__top-content__button">Contact me</button>
       </div>
       <div className="contact-section__bottom-content">
         <div className="contact-section__bottom-content__copyright">
@@ -18,19 +23,19 @@ export const ContactSection = () => {
             <a href="#work" className="contact-section__bottom-content__nav__links__link">Work</a>
             <a href="#contact" className="contact-section__bottom-content__nav__links__link">Contact</a>
           </div>
-          <div className="contact-section__bottom-content__nav__links">
+          {/* <div className="contact-section__bottom-content__nav__links">
             <p className="contact-section__bottom-content__nav__links__title">Projects</p>
-            <a href="#home" className="contact-section__bottom-content__nav__links__link">Home</a>
-            <a href="#about" className="contact-section__bottom-content__nav__links__link">About</a>
-            <a href="#work" className="contact-section__bottom-content__nav__links__link">Work</a>
-            <a href="#contact" className="contact-section__bottom-content__nav__links__link">Contact</a>
-          </div>
+            {projects.slice(0, 4).map((project) => (
+              <a key={project.id} href={project.link} className="contact-section__bottom-content__nav__links__link">{project.name}</a>
+            ))}
+
+          </div> */}
           <div className="contact-section__bottom-content__nav__links">
             <p className="contact-section__bottom-content__nav__links__title">Socials</p>
-            <a href="https://github.com/Orange4Broom" className="contact-section__bottom-content__nav__links__link">Github</a>
-            <a href="https://www.linkedin.com/in/jakub-trn%C4%8D%C3%A1k-a74a22260/" className="contact-section__bottom-content__nav__links__link">LinkedIn</a>
-            <a href="#work" className="contact-section__bottom-content__nav__links__link">Instagram</a>
-            <a href="#contact" className="contact-section__bottom-content__nav__links__link">Discord</a>
+            <a href="https://github.com/Orange4Broom" target="_blank" className="contact-section__bottom-content__nav__links__link">Github</a>
+            <a href="https://www.linkedin.com/in/jakub-trn%C4%8D%C3%A1k-a74a22260/" target="_blank" className="contact-section__bottom-content__nav__links__link">LinkedIn</a>
+            <a href="https://www.instagram.com/_jen_kuba_/" target="_blank" className="contact-section__bottom-content__nav__links__link">Instagram</a>
+            <a href="https://discordapp.com/users/76.gender" target="_blank" className="contact-section__bottom-content__nav__links__link">Discord</a>
           </div>
         </div>
       </div>

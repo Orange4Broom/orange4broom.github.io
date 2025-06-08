@@ -8,10 +8,10 @@ export const WorkSection = () => {
     <section className="work-section" id="work">
       <div className="work-section__header">
         <h2 className="work-section__header__title">My Portfolio</h2>
-        <button type="button" className="work-section__header__button">
+        {/* <button type="button" className="work-section__header__button">
           All projects
           <Icon name="angle-right" type="fas" />
-        </button>
+        </button> */}
       </div>
       <div className="work-section__content">
         <div className="work-section__content__project">
@@ -25,9 +25,9 @@ export const WorkSection = () => {
                     <span className="work-section__content__project__item__tags__tag" key={tag}>{tag}</span>
                   ))}
                 </div>
-                <button type="button" onClick={() => window.open(project.link, '_blank')} className="work-section__content__project__item__button">
+                {/* <button type="button" onClick={() => window.open(project.link, '_blank')} className="work-section__content__project__item__button">
                   <Icon name="arrow-right" type="fas" />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
