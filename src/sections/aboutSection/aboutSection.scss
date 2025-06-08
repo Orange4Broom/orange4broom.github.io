@@ -59,6 +59,10 @@
         border-radius: 10px;
         background-color: #1A1A1A;
 
+        &:hover {
+          background-color: #222222;
+        }
+
         &__icon {
           display: flex;
           align-items: center;
