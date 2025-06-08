@@ -1,9 +1,12 @@
 import { Navigation } from "./components/blocks/navigation/Navigation";
 import { Icon } from "./components/elements/icon/Icon";
 import { useDownloadCV } from "./hooks/useDownloadCV";
+import { useGetTechnologies } from "./hooks/useGetTechnologies";
+import './sections/aboutSection/aboutSection.scss';
 
 export const App = () => {
   const { handleDownloadCV } = useDownloadCV();
+  const technologies = useGetTechnologies();
 
   return (
     <>
@@ -27,6 +30,25 @@ export const App = () => {
               Download CV
             </button>
           </div>
+        </div>
+      </section>
+      <section className="about-section" id="about">
+        <div className="about-section__content">
+          <h2 className="about-section__content__title">Current <span className="about-section__content__title--highlight">technologies</span></h2>
+          <p className="about-section__content__description">I'm proficient in a range of modern technologies that empower me to build highly functional solutions.<br />These are some of my main technologies.</p>
+        </div>
+        <div className="about-section__content__technologies">
+          {technologies.map((technology) => (
+            <div className="about-section__content__technologies__technology" key={technology.name}>
+              <div className="about-section__content__technologies__technology__icon" style={{ backgroundColor: technology.backgroundColor }}>
+                <img src={technology.icon} alt={technology.name} />
+              </div>
+              <div className="about-section__content__technologies__technology__info">
+                <h3 className="about-section__content__technologies__technology__info__name">{technology.name}</h3>
+                <p className="about-section__content__technologies__technology__info__description">{technology.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
