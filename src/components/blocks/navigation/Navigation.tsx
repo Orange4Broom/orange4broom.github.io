@@ -1,4 +1,4 @@
-import './Navigation.scss';
+import './navigation.scss';
 
 export const Navigation = () => {
   return (
