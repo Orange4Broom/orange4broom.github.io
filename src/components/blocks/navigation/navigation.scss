@@ -1,0 +1,35 @@
+.navigation {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 32px;
+  z-index: 100;
+  background-color: #1A1A1A;
+  border: 1px solid #3F3F3F;
+  border-radius: 8px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__link {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
