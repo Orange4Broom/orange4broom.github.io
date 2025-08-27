@@ -7,7 +7,7 @@ export const AboutSection = () => {
     <section className="about-section" id="about">
       <div className="about-section__content">
         <h2 className="about-section__content__title">Current <span className="about-section__content__title--highlight">technologies</span></h2>
-        <p className="about-section__content__description">I'm proficient in a range of modern technologies that empower me to build highly functional solutions.<br />These are some of my main technologies.</p>
+        <p className="about-section__content__description">Technologies I use: Expertise in modern tools for building efficient and scalable web solutions.<br />These are some of my main technologies.</p>
       </div>
       <div className="about-section__content__technologies">
         {technologies.map((technology: Technology) => (

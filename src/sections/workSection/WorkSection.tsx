@@ -1,7 +1,7 @@
-import { Project, useGetProjects } from "@/hooks/useGetProjects";
+import { Description, Project, useGetProjects } from "@/hooks/useGetProjects";
 
 export const WorkSection = () => {
-  const { projects } = useGetProjects();
+  const { projects, descriptions } = useGetProjects();
 
   return (
     <section className="work-section" id="work">
@@ -18,6 +18,13 @@ export const WorkSection = () => {
             <div className="work-section__content__project__item" key={project.name}>
               <img className="work-section__content__project__item__image" src={project.image} alt={project.name} />
               <h3 className="work-section__content__project__item__title">{project.name}</h3>
+              {descriptions.map((description: Description) => (
+                project.id === description.id && (
+                  <p key={description.id} className="work-section__content__project__item__description" >
+                    {description.text}
+                  </p>
+                )
+              ))}
               <div className="work-section__content__project__item__info">
                 <div className="work-section__content__project__item__tags">
                   {project.tags.map((tag: string) => (

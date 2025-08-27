@@ -10,10 +10,10 @@ export const HomeSection = () => {
       <div className="home-section__content">
         <p className="home-section__content__country">Based in czechia</p>
         <h1 className="home-section__content__title">
-          Quality <span className="home-section__content__title--highlight">Design & Professionalism</span> in <span className="home-section__content__title--highlight">Web </span> Development
+          Web Development with <span className="home-section__content__title--highlight">Focus on Quality</span> and <span className="home-section__content__title--highlight">Usability </span>
         </h1>
         <p className="home-section__content__description">
-          Hi, I'm Jakub, I create intuitive, visually stunning, and highly functional web applications.
+          I’m Jakub. I specialize in building intuitive, efficient, and scalable web applications.
         </p>
         <div className="home-section__content__buttons">
           <a href="#work" className="home-section__content__buttons__button--work">
