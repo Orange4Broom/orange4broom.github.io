@@ -51,19 +51,19 @@ export const useGetProjects = () => {
   const descriptions: Description[] = [
     {
       id: 'beachkemp',
-      text: 'BeachKemp je webová aplikace pro registraci na beachové tréninky, která umožňuje uživatelům přihlašování a správu tréninků. Administrátor může snadno vytvářet a upravovat tréninky, s automatickým zasíláním emailů účastníkům při změnách, jako je zrušení tréninku.'
+      text: 'BeachKemp is a web application for signing up for beach training sessions, allowing users to register and manage their sessions. Administrators can easily create and edit sessions, with automatic email notifications sent to participants in case of cancellations or changes.'
     },
     {
       id: 'bezpecnaplzen',
-      text: 'Bezpečná Plzeň je webová aplikace zaměřená na vzdělávání o bezpečnosti a správném jednání v krizových situacích. Uživatelé se učí, jak se chovat v nebezpečných situacích'
+      text: 'Bezpečná Plzeň je webová aplikace zaměřená na vzdělávání o bezpečnosti a správném jednání v krizových situacích. Uživatelé se učí, jak se chovat v nebezpečných situacíchBezpečná Plzeň is a web application focused on educating users about safety and proper actions in emergency situations. Users learn how to behave in dangerous situations and receive important real-time information.'
     },
     {
       id: 'obfinder',
-      text: 'OB-Finder je desktopová aplikace inspirovaná správci souborů, která umožňuje uživatelům prohlížet soubory a disky, procházet různé kategorie a snadno organizovat data s intuitivním rozhraním.'
+      text: 'OB-Finder is a cross-platform desktop application inspired by file explorers, allowing users to browse files, disks, and categories with an intuitive interface for easy data organization.'
     },
     {
       id: 'firestorehelper',
-      text: 'Firestore Helper TS je npm balíček pro vývojáře, který usnadňuje práci s Firestore. Automaticky inicializuje připojení k databázi a přidává podporu pro cache a další pokročilé funkce pro efektivní správu dat.'
+      text: 'Firestore Helper TS is an npm package for developers that simplifies working with Firestore. It automatically initializes database connections and adds support for caching and other advanced features for efficient data management.'
     }
   ]
 
