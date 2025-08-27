@@ -55,7 +55,7 @@ export const useGetProjects = () => {
     },
     {
       id: 'bezpecnaplzen',
-      text: 'Bezpečná Plzeň je webová aplikace zaměřená na vzdělávání o bezpečnosti a správném jednání v krizových situacích. Uživatelé se učí, jak se chovat v nebezpečných situacíchBezpečná Plzeň is a web application focused on educating users about safety and proper actions in emergency situations. Users learn how to behave in dangerous situations and receive important real-time information.'
+      text: 'Bezpečná Plzeň is a web application focused on educating users about safety and proper actions in emergency situations. Users learn how to behave in dangerous situations and receive important real-time information.'
     },
     {
       id: 'obfinder',
